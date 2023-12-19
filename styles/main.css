@@ -256,7 +256,7 @@ td {
 
 .icon-text {
     display: flex;
-    align-items: center;
+    align-items: normal;
 }
 
 td a {
