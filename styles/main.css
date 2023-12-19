@@ -74,7 +74,7 @@
 }
 
 .filter-label-text{
-    padding: 10px 50px;
+    padding: 10px 0px 10px 50px;
     font-size: .875rem;
     font-family: "Segoe UI VSS (Regular)","Segoe UI","-apple-system",BlinkMacSystemFont,Roboto,"Helvetica Neue",Helvetica,Ubuntu,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
     width: 100%;
@@ -87,13 +87,7 @@
     background-position: 15px center; /* Adjust the position of the image */
 }
 
-/* Responsive styles for smaller screens */
-@media only screen and (max-width: 600px) {
-    .filter-label-text {
-        padding: 10px; /* Adjust padding for smaller screens */
-        background-position: 8px center; /* Adjust the position of the image */
-    }
-}
+
 
 .filter-label-text:focus {
     outline: none; /* Remove default focus outline */
