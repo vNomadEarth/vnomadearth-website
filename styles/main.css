@@ -74,7 +74,10 @@
 }
 
 .filter-label-text{
-    padding: 10px 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 50px;
+    padding-right: 0px;
     font-size: .875rem;
     font-family: "Segoe UI VSS (Regular)","Segoe UI","-apple-system",BlinkMacSystemFont,Roboto,"Helvetica Neue",Helvetica,Ubuntu,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
     width: 100%;
