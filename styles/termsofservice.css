@@ -41,7 +41,7 @@
 
 /* Media query for mobile devices (adjust the max-width as needed) */
 @media only screen and (max-width: 768px) {
-    .content-privacypolicy {
+    .content-terms {
         display: block; /* Change to block for a stacked layout */
         margin-bottom: 20px; /* Adjust margin for smaller screens */
         max-width: 100%; /* Use full width of the screen */
