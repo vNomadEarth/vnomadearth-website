@@ -251,6 +251,7 @@ td {
 
 td a {
     text-decoration: none;
+    vertical-align: middle;
 }
 
 td a:hover {
@@ -259,4 +260,5 @@ td a:hover {
 
 td i {
     color: brown;
+    vertical-align: middle;
 }
