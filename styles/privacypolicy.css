@@ -40,7 +40,7 @@
 }
 
 /* Media query for mobile devices (adjust the max-width as needed) */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 600px) {
     .content-privacypolicy {
         justify-content: space-between;
         margin-bottom: 50px;
