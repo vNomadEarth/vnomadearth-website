@@ -215,7 +215,7 @@
     font-family: "Segoe UI VSS (Regular)","Segoe UI","-apple-system",BlinkMacSystemFont,Roboto,"Helvetica Neue",Helvetica,Ubuntu,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
 }
 
-.countries-button-clearn:hover {
+.countries-button-clear:hover {
     background-color: #f2f2f2;
     border-radius: 2px;
 }
