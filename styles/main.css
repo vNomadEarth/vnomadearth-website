@@ -261,6 +261,7 @@ td {
 
 td a {
     text-decoration: none;
+    margin-left: 5px;
 }
 
 td a:hover {
