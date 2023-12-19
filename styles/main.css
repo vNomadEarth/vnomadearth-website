@@ -247,11 +247,12 @@ td {
     padding-top: 10px;
     font-size: .875rem;
     font-family: "Segoe UI VSS (Regular)","Segoe UI","-apple-system",BlinkMacSystemFont,Roboto,"Helvetica Neue",Helvetica,Ubuntu,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    display: flex; /* Use flexbox layout */
+    align-items: center; /* Align items vertically */
 }
 
 td a {
     text-decoration: none;
-    vertical-align: middle;
 }
 
 td a:hover {
@@ -260,5 +261,4 @@ td a:hover {
 
 td i {
     color: brown;
-    vertical-align: middle;
 }
