@@ -247,8 +247,6 @@ td {
     padding-top: 10px;
     font-size: .875rem;
     font-family: "Segoe UI VSS (Regular)","Segoe UI","-apple-system",BlinkMacSystemFont,Roboto,"Helvetica Neue",Helvetica,Ubuntu,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
-    display: flex; /* Use flexbox layout */
-    align-items: center; /* Align items vertically */
 }
 
 td a {
@@ -259,6 +257,13 @@ td a:hover {
     text-decoration: underline;
 }
 
-td i {
+
+.icon-container {
+    display: flex;
+    align-items: center;
+}
+
+.icon {
     color: brown;
+    margin-right: 5px; /* Add spacing between the icon and the link */
 }
