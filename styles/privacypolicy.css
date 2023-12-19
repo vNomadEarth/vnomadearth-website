@@ -40,11 +40,11 @@
 }
 
 /* Media query for mobile devices (adjust the max-width as needed) */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
     .content-privacypolicy {
-        justify-content: space-between;
-        margin-bottom: 50px;
-        max-width: 1100px;
+        display: block; /* Change to block for a stacked layout */
+        margin-bottom: 20px; /* Adjust margin for smaller screens */
+        max-width: 100%; /* Use full width of the screen */
     }
 }
 
