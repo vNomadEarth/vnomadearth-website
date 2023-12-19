@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>vNomad</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="styles/header.css">
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
+</head>
+<body>
+    <header>
+        <h1><a href="main.html">vNomad</a></h1>
+        <nav>
+            <ul>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="container">
+        <div class="content-vmap">
+            <div class="section-vmap">
+                <h2>Discover the World with Ease: Your Gateway to Unforgettable Adventures</h2>
+                <p>Virtual Maps give you a quick overview of the essentials and suggested things to do in the city and its surrounding areas. Unlock the full potential of your travels with Virtual Maps' intuitive interface and helpful features.</p>
+            </div>
+        </div> 
+
+        <div class="line-vmap"></div>
+        <div class="section-pool">
+            <h3>Pool</h3>
+        </div>
+    
+
+        <div class="box-filter">
+            <div class="box-filter-text">
+                <input type="text" class="filter-label-text" placeholder="Filter by keyword">
+                <div class="dropdown-filter-countries">
+                    <button class="dropdown-filter-button-countries">
+                        Countries
+                        <span class="icon"><i class="fas fa-chevron-down"></i></span>
+                    </button>
+                    <div class="dropdown-filter-countries-content">
+                        <div class="countries-box-search">
+                            <input type="text" class="search-box-text" placeholder="Search">
+                        </div>
+                        <div class="countries-checkbox-list">
+                            <label class="checkbox-item" data-country="France"><input type="checkbox" value="France"> France</label>
+                            <!-- Add more options as needed -->
+                        </div>
+                        <div class="countries-box-clear">
+                            <button class="countries-button-clear">
+                                <span class="icon"><i class="fa-solid fa-xmark"></i></span>
+                                Clear
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="table-pool">
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Title</th>
+                    <th>Description</th>
+                </tr>
+                <tr data-country="France">
+                    <td>1</td>
+                    <td>
+                        <span class="icon"><i class="fas fa-check-square"></i></span>
+                        <a href="https://www.google.com/maps/d/u/0/edit?mid=1QRNglUAAMfbnBDfx3T8ndi4LJWHI9eI&usp=sharing">Bordeaux</a></td>
+                    <td>Essentials and suggested things to do</td>
+                </tr>
+                <!-- Add more rows as needed -->
+            </table>
+        </div>
+    </div>
+    
+    
+    <footer>
+        &copy; 2023 vNomad. All rights reserved. | <a href="privacypolicy.html">Privacy Policy</a> | <a href="termsofuse.html">Terms</a>
+    </footer>
+
+    <script src="scripts/header.js"></script>
+    <script src="scripts/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Get the input element for filtering by keyword
+            var filterInput = document.querySelector('.filter-label-text');
+    
+            // Get the table rows
+            var tableRows = document.querySelectorAll('.table-pool table tr');
+    
+            // Get the input element for filtering countries
+            var countriesFilterInput = document.querySelector('.countries-box-search input');
+    
+            // Get the list of country checkboxes
+            var countryCheckboxes = document.querySelectorAll('.countries-checkbox-list input');
+    
+            // Function to check if a row should be displayed based on text and selected countries
+            function shouldDisplayRow(row, filterText, selectedCountries) {
+                var title = row.querySelector('td:nth-child(2)').textContent.toLowerCase();
+                var dataCountry = row.getAttribute('data-country');
+    
+                var textMatch = title.includes(filterText);
+                var countryMatch = selectedCountries.length === 0 || selectedCountries.includes(dataCountry);
+    
+                return textMatch && countryMatch;
+            }
+    
+            // Add an event listener to the filter input
+            filterInput.addEventListener('input', function () {
+                var filterText = filterInput.value.toLowerCase();
+    
+                // Get the selected countries
+                var selectedCountries = [];
+                for (var j = 0; j < countryCheckboxes.length; j++) {
+                    if (countryCheckboxes[j].checked) {
+                        selectedCountries.push(countryCheckboxes[j].value);
+                    }
+                }
+    
+                // Loop through each table row starting from the second row (skipping the header)
+                for (var i = 1; i < tableRows.length; i++) {
+                    // If the row should be displayed, show it; otherwise, hide it
+                    tableRows[i].style.display = shouldDisplayRow(tableRows[i], filterText, selectedCountries) ? '' : 'none';
+                }
+            });
+    
+            // Add an event listener to the countries search input
+            countriesFilterInput.addEventListener('input', function () {
+                var countriesFilterText = countriesFilterInput.value.toLowerCase();
+    
+                // Loop through each country checkbox
+                for (var i = 0; i < countryCheckboxes.length; i++) {
+                    // Get the country label
+                    var countryLabel = countryCheckboxes[i].parentNode;
+    
+                    // Get the country label text
+                    var countryLabelText = countryLabel.textContent.toLowerCase();
+    
+                    // If the country label text contains the filter text, show the label; otherwise, hide it
+                    countryLabel.style.display = countryLabelText.includes(countriesFilterText) ? '' : 'none';
+                }
+    
+                // Get the selected countries
+                var selectedCountries = [];
+                for (var j = 0; j < countryCheckboxes.length; j++) {
+                    if (countryCheckboxes[j].checked) {
+                        selectedCountries.push(countryCheckboxes[j].value);
+                    }
+                }
+    
+                // Loop through each table row starting from the second row (skipping the header)
+                for (var k = 1; k < tableRows.length; k++) {
+                    // If the row should be displayed, show it; otherwise, hide it
+                    tableRows[k].style.display = shouldDisplayRow(tableRows[k], filterInput.value.toLowerCase(), selectedCountries) ? '' : 'none';
+                }
+            });
+    
+            // Add an event listener to the country checkboxes
+            for (var i = 0; i < countryCheckboxes.length; i++) {
+                countryCheckboxes[i].addEventListener('change', function () {
+                    // Get the selected countries
+                    var selectedCountries = [];
+                    for (var j = 0; j < countryCheckboxes.length; j++) {
+                        if (countryCheckboxes[j].checked) {
+                            selectedCountries.push(countryCheckboxes[j].value);
+                        }
+                    }
+    
+                    // Loop through each table row starting from the second row (skipping the header)
+                    for (var k = 1; k < tableRows.length; k++) {
+                        // If the row should be displayed, show it; otherwise, hide it
+                        tableRows[k].style.display = shouldDisplayRow(tableRows[k], filterInput.value.toLowerCase(), selectedCountries) ? '' : 'none';
+                    }
+                });
+            }
+        });
+    </script>
+    
+    
+    
+    
+    
+
+</body>
+</html>
+

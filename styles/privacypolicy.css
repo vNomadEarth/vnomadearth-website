@@ -1,0 +1,74 @@
+/* Main content styles */
+.container {
+    margin: 120px 20px 20px;
+    padding: 0 20px;
+}
+
+.section-privacypolicy {
+    flex-basis: 100%;
+    text-align: left;
+    margin-bottom: 20px;
+    margin-top: 200px;
+}
+
+.section-privacypolicy h2 {
+    font-size: 1.75rem;
+    font-weight: bold;
+    letter-spacing: -.04em;
+    font-family: "Segoe UI VSS (Regular)","Segoe UI","-apple-system",BlinkMacSystemFont,Roboto,"Helvetica Neue",Helvetica,Ubuntu,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    margin-bottom: 20px;
+}
+
+.section-privacypolicy p {
+    font-size: .875rem;
+    font-family: "Segoe UI VSS (Regular)","Segoe UI","-apple-system",BlinkMacSystemFont,Roboto,"Helvetica Neue",Helvetica,Ubuntu,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    max-width: 750px;
+}
+
+.line-privacypolicy {
+    width: 100%;
+    border-top: 1px solid #ccc;
+    margin-top: 100px;
+}
+
+.content-privacypolicy {
+    display: flex;
+    flex-basis: 100%;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    max-width: 1100px;
+}
+
+.section-updated,
+.section-privacypolicy-text {
+    flex-basis: calc(50% -20px);
+}
+
+.section-updated h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 1.3125rem;
+    font-weight: 600;
+    letter-spacing: -.02em;
+    font-family: "Segoe UI VSS (Regular)","Segoe UI","-apple-system",BlinkMacSystemFont,Roboto,"Helvetica Neue",Helvetica,Ubuntu,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    margin-right: 200px;
+}
+
+.section-updated p {
+    margin-bottom: 20px;
+    font-size: .875rem;
+    font-family: "Segoe UI VSS (Regular)","Segoe UI","-apple-system",BlinkMacSystemFont,Roboto,"Helvetica Neue",Helvetica,Ubuntu,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+}
+
+.section-privacypolicy-text p {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: .875rem;
+    font-family: "Segoe UI VSS (Regular)","Segoe UI","-apple-system",BlinkMacSystemFont,Roboto,"Helvetica Neue",Helvetica,Ubuntu,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+}
+
+.section-privacypolicy-text strong {
+    font-weight: bold;
+    font-size: .875rem;
+    font-family: "Segoe UI VSS (Regular)","Segoe UI","-apple-system",BlinkMacSystemFont,Roboto,"Helvetica Neue",Helvetica,Ubuntu,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+}
