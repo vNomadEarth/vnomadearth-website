@@ -249,7 +249,6 @@ th {
 }
 
 td {
-    text-align: left;
     padding-top: 10px;
     font-size: .875rem;
     font-family: "Segoe UI VSS (Regular)","Segoe UI","-apple-system",BlinkMacSystemFont,Roboto,"Helvetica Neue",Helvetica,Ubuntu,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
@@ -258,6 +257,7 @@ td {
 
 .icon-text {
     display: flex;
+    align-items: flex-start;
 }
 
 td a {
