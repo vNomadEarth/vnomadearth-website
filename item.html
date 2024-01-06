@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work Details</title>
+    <link rel="stylesheet" type="text/css" href="styles/header.css">
+    <link rel="stylesheet" type="text/css" href="styles/item.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1><a href="index.html">vNomad</a></h1>
+        <nav>
+            <ul>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <button class="button-backtoitem">
+            <span class="icon"><i class="fas fa-arrow-left"></i></span>
+            <a href="index.html">Back to Items</a>   
+        </button>
+        <div class="box-item">
+            <div class="label-item">
+                <span class="icon"><i class="fas fa-check-square"></i></span>
+                <span class="item-text"></span>
+            </div>
+            <div class="label-nameofcity"></div>
+            <div class="label-commentsandtags">
+                <span class="icon"><i class="far fa-comment-alt"></i></span>
+                <a href="#">0 Comments</a>
+                <span class="tags"><button class="tag"></button></span>
+            </div>
+            <button class="button-follow">
+                <span class="icon"><i class="far fa-bell"></i></span>
+                Follow
+            </button>
+        </div>
+
+        <div class="box-header-info">
+            <div class="label-updated"></div>
+            <div class="buttons">
+                <span class="spanbuttons">
+                    <button class="button-details">Details</button>
+                    <button class="button-history"><i class="fas fa-history"></i></span></button>
+                    <button class="button-attachements"><i class="fa fa-paperclip"></i></span></button>
+                </span>
+            </div>
+        </div>
+
+        <div class="box-info-details">
+            <div class="label-desc">Description</div>
+            <div class="line"></div>
+            <div class="label-text">How to</div>
+        </div>
+
+        <div class="box-info-attachments">
+            <div class="label-attachments">Attachments</div>
+            <div class="line"></div>
+            <div class="table-attachments">
+                <table>
+                    <tr>
+                        <th>ID</th>
+                        <th>Link</th>
+                    </tr>
+                    <tr id="link1Row">
+                        <td>1</td>
+                        <td><a href="" target="_blank">Virtual Map</a></td>
+                    </tr>
+                    <tr id="link2Row">
+                        <td>2</td>
+                        <td><a href="" target="_blank">List of Places</a></td>
+                    </tr>
+                    <!-- Add more rows as needed -->
+                </table>
+            </div>
+        </div>
+
+        <footer>
+            &copy; 2023 vNomad. All rights reserved. | <a href="privacypolicy.html">Privacy Policy</a> | <a href="termsofservices.html">Terms</a>
+        </footer>
+
+    </div>
+    <script src="scripts/header.js"></script>
+    <script src="scripts/item.js"></script>
+    <script>
+        // Get the URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        
+        // Get the values
+        const item = urlParams.get('item');
+        const date = urlParams.get('date');
+        const name = urlParams.get('name');
+        const country = urlParams.get('country');
+        const link1 = urlParams.get('link1');
+        const link2 = urlParams.get('link2');
+        
+        // Update the content of the item number div
+        document.querySelector('.label-item .item-text').textContent = "ITEM " + item;
+
+        // Update the content of the date
+        document.querySelector('.label-updated').textContent = date;
+
+        // Update the content of the name div
+        document.querySelector('.label-nameofcity').textContent = name;
+
+        // Update the content of the country tag button
+        document.querySelector('.tags .tag').textContent = country;
+    
+        // Update the href attribute of the links in the table
+        document.getElementById('link1Row').querySelector('a').href = link1;
+        document.getElementById('link2Row').querySelector('a').href = link2;
+    </script>
+    
+</body>
+</html>
+
+
