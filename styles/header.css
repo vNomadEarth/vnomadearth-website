@@ -82,6 +82,40 @@ header nav ul li a:hover {
     border-bottom: 2px solid #1F1F1F;
 }
 
+/* Add this media query to handle smaller screens */
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: row; /* Align items horizontally */
+        justify-content: space-between; /* Spread items to the ends */
+        align-items: center; /* Center items vertically */
+        padding: 10px; /* Adjust padding for better spacing */
+    }
+
+    nav {
+        margin: 10px 0; /* Add margin for better spacing */
+        width: auto; /* Allow the navigation to adjust its width */
+        float: none; /* Remove float for stacking in a column */
+    }
+
+    nav ul {
+        text-align: center; /* Center the list items */
+        padding: 0; /* Remove padding for better alignment */
+    }
+
+    nav ul li {
+        display: block; /* Display list items as block for stacking */
+        margin: 5px 10px; /* Add some spacing between items, including padding on the right side */
+    }
+
+    header h1 {
+        order: 1; /* Set the order to 1 to move it to the left */
+    }
+
+    nav {
+        order: 2; /* Set the order to 2 to move it to the right */
+    }
+}
+
 /* Footer styles */
 footer {
     background-color: #1F1F1F;
