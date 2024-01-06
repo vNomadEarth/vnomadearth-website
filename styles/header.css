@@ -28,7 +28,6 @@ header {
 
 header h1 a span img {
     max-width: 40px; /* Adjust the maximum width of the image as needed */
-    margin-right: 5px; /* Adjust the margin as needed */
 }
 
 header h1 {
