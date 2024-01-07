@@ -54,7 +54,7 @@
         <div class="box-info-details">
             <div class="label-desc">Description</div>
             <div class="line"></div>
-            <div class="label-text">How to</div>
+            <div class="label-text">How to </div>
         </div>
 
         <div class="box-info-attachments">
@@ -72,6 +72,10 @@
                     </tr>
                     <tr id="link2Row">
                         <td>2</td>
+                        <td><a href="" target="_blank">Embedded Map</a></td>
+                    </tr>
+                    <tr id="link3Row">
+                        <td>3</td>
                         <td><a href="" target="_blank">List of Places</a></td>
                     </tr>
                     <!-- Add more rows as needed -->
@@ -97,7 +101,8 @@
         const country = urlParams.get('country');
         const link1 = urlParams.get('link1');
         const link2 = urlParams.get('link2');
-        
+        const link3 = urlParams.get('link3');
+
         // Update the content of the item number div
         document.querySelector('.label-item .item-text').textContent = "ITEM " + item;
 
@@ -113,6 +118,7 @@
         // Update the href attribute of the links in the table
         document.getElementById('link1Row').querySelector('a').href = link1;
         document.getElementById('link2Row').querySelector('a').href = link2;
+        document.getElementById('link3Row').querySelector('a').href = link3;
     </script>
     
 </body>
