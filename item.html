@@ -54,7 +54,26 @@
         <div class="box-info-details">
             <div class="label-desc">Description</div>
             <div class="line"></div>
-            <div class="label-text">How to </div>
+            <div class="label-text">How to Open a New Virtual Map (example)</div>
+            <div id="slider-container">
+                <div id="slider">
+                    <div class="slide">
+                        <div class="text-overlay">1. Click on &#128206 to view the attachments. <br>2. Then click on <i>Virtual Map</i>. It should automatically open in the Google Maps application.</div>
+                        <img src="images/mobile_1.png" alt="Image 1">
+                    </div>
+                    <div class="slide">
+                        <div class="text-overlay">3. Click on <i>View Map Legend</i> to see the objects on the Virtual Map.</div>
+                        <img src="images/mobile_2.png" alt="Image 2">
+                    </div>
+                    <div class="slide">
+                        <div class="text-overlay">You can activate or deactivate layers on the Virtual Map using the checkboxes next to each layer.</div>
+                        <img src="images/mobile_3.jpg" alt="Image 2">
+                    </div>
+                <!-- Add more slides as needed -->
+              </div>
+              <button id="left-btn" onclick="prevSlide()"> &lt; </button>
+              <button id="right-btn" onclick="nextSlide()"> &gt; </button>
+            </div>
         </div>
 
         <div class="box-info-attachments">
@@ -115,6 +134,57 @@
         document.getElementById('link1Row').querySelector('a').href = link1;
         document.getElementById('link2Row').querySelector('a').href = link2;
     </script>
+    <script>
+        let currentIndex = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+        const sliderContainer = document.getElementById('slider-container');
+        const leftBtn = document.getElementById('left-btn');
+        const rightBtn = document.getElementById('right-btn');
+      
+        function updateSlider() {
+          const newTransformValue = -currentIndex * 100 + '%';
+          document.getElementById('slider').style.transform = 'translateX(' + newTransformValue + ')';
+        }
+      
+        function nextSlide() {
+          currentIndex = (currentIndex + 1) % totalSlides;
+          updateSlider();
+        }
+      
+        function prevSlide() {
+          currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+          updateSlider();
+        }
+      
+        sliderContainer.addEventListener('mouseenter', () => {
+          leftBtn.style.display = 'block';
+          rightBtn.style.display = 'block';
+          });
+      
+          sliderContainer.addEventListener('mouseleave', () => {
+          leftBtn.style.display = 'none';
+          rightBtn.style.display = 'none';
+          });
+      
+        // Add touch support for mobile devices
+        let touchStartX = 0;
+        let touchEndX = 0;
+      
+        document.getElementById('slider-container').addEventListener('touchstart', (e) => {
+          touchStartX = e.touches[0].clientX;
+        });
+      
+        document.getElementById('slider-container').addEventListener('touchend', (e) => {
+          touchEndX = e.changedTouches[0].clientX;
+      
+          if (touchEndX < touchStartX) {
+            nextSlide();
+          } else if (touchEndX > touchStartX) {
+            prevSlide();
+          }
+        });
+      </script>
     
 </body>
 </html>
