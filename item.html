@@ -141,55 +141,50 @@
         const sliderContainer = document.getElementById('slider-container');
         const leftBtn = document.getElementById('left-btn');
         const rightBtn = document.getElementById('right-btn');
-    
+      
         function updateSlider() {
-            const newTransformValue = -currentIndex * 100 + '%';
-            document.getElementById('slider').style.transform = 'translateX(' + newTransformValue + ')';
+          const newTransformValue = -currentIndex * 100 + '%';
+          document.getElementById('slider').style.transform = 'translateX(' + newTransformValue + ')';
         }
-    
+      
         function nextSlide() {
-            currentIndex = (currentIndex + 1) % totalSlides;
-            updateSlider();
+          currentIndex = (currentIndex + 1) % totalSlides;
+          updateSlider();
         }
-    
+      
         function prevSlide() {
-            currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
-            updateSlider();
+          currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+          updateSlider();
         }
-    
+      
         sliderContainer.addEventListener('mouseenter', () => {
-            leftBtn.style.display = 'block';
-            rightBtn.style.display = 'block';
-        });
-    
-        sliderContainer.addEventListener('mouseleave', () => {
-            leftBtn.style.display = 'none';
-            rightBtn.style.display = 'none';
-        });
-    
+          leftBtn.style.display = 'block';
+          rightBtn.style.display = 'block';
+          });
+      
+          sliderContainer.addEventListener('mouseleave', () => {
+          leftBtn.style.display = 'none';
+          rightBtn.style.display = 'none';
+          });
+      
         // Add touch support for mobile devices
         let touchStartX = 0;
         let touchEndX = 0;
-    
+      
         document.getElementById('slider-container').addEventListener('touchstart', (e) => {
-            touchStartX = e.touches[0].clientX;
+          touchStartX = e.touches[0].clientX;
         });
-    
-        document.getElementById('slider-container').addEventListener('touchmove', (e) => {
-            // Prevent default behavior to avoid scrolling
-            e.preventDefault();
-        });
-    
+      
         document.getElementById('slider-container').addEventListener('touchend', (e) => {
-            touchEndX = e.changedTouches[0].clientX;
-    
-            if (touchEndX < touchStartX) {
-                nextSlide();
-            } else if (touchEndX > touchStartX) {
-                prevSlide();
-            }
+          touchEndX = e.changedTouches[0].clientX;
+      
+          if (touchEndX < touchStartX) {
+            nextSlide();
+          } else if (touchEndX > touchStartX) {
+            prevSlide();
+          }
         });
-    </script>    
+      </script>  
     
 </body>
 </html>
