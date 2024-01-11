@@ -58,7 +58,7 @@
             <div id="slider-container">
                 <div id="slider">
                     <div class="slide">
-                        <div class="text-overlay">1. Click on &#128206 to view the attachments. <br>2. Then click on <i>Virtual Map</i>. It should automatically open in the Google Maps application.</div>
+                        <div class="text-overlay">1. Click on &#128206 to view the attachments.<br>2. Then click on <i>Virtual Map</i>.<br><br>If you have opened the website via Google Chrome on your mobile device, the Virtual Map should be automatically opened in the Google Maps application.</div>
                         <img src="images/mobile_1.png" alt="Image 1">
                     </div>
                     <div class="slide">
@@ -69,10 +69,55 @@
                         <div class="text-overlay">You can activate or deactivate layers on the Virtual Map using the checkboxes next to each layer.</div>
                         <img src="images/mobile_3.jpg" alt="Image 2">
                     </div>
-                <!-- Add more slides as needed -->
-              </div>
-              <button id="left-btn" onclick="prevSlide()"> &lt; </button>
-              <button id="right-btn" onclick="nextSlide()"> &gt; </button>
+                </div>
+                <button id="left-btn" onclick="prevSlide()"> &lt; </button>
+                <button id="right-btn" onclick="nextSlide()"> &gt; </button>
+            </div>
+            <div class="label-text2">How to Open a Saved Virtual Map (example)</div>
+            <div id="slider-container2">
+                <div id="slider2">
+                    <div class="slide2">
+                        <div class="text-overlay">1. Open Google Maps application and click on <i>Saved</i>.</div>
+                        <img src="images/mobile_4.png" alt="Image 4">
+                    </div>
+                    <div class="slide2">
+                        <div class="text-overlay">2. Then click on <i>Maps</i> to view the saved maps.</div>
+                        <img src="images/mobile_5.png" alt="Image 5">
+                    </div>
+                    <div class="slide2">
+                        <div class="text-overlay">3. Select the map you want to view in the Google Maps application.</div>
+                        <img src="images/mobile_6.png" alt="Image 6">
+                    </div>
+                    <div class="slide2">
+                        <div class="text-overlay">Now, you can view the map that was previously open on the website. See <i>How to Open a New Virtual Map</i>.</div>
+                        <img src="images/mobile_7.jpg" alt="Image 7">
+                    </div>
+                </div>
+                <button id="left-btn2" onclick="prevSlide2()"> &lt; </button>
+                <button id="right-btn2" onclick="nextSlide2()"> &gt; </button>
+            </div>
+            <div class="label-text2">How to Open a Saved Virtual Map in MyMaps (example)</div>
+            <div id="slider-container3">
+                <div id="slider3">
+                    <div class="slide3">
+                        <div class="text-overlay">1. Search for <i>Google My Maps</i> and click on the result for <i>Google My Maps</i>.</div>
+                        <img src="images/mobile_8.jpg" alt="Image 8">
+                    </div>
+                    <div class="slide3">
+                        <div class="text-overlay">2. Click on <i>Begin</i>.</div>
+                        <img src="images/mobile_9.jpg" alt="Image 9">
+                    </div>
+                    <div class="slide3">
+                        <div class="text-overlay">3. Select <i>OF OTHERS</i> view.</div>
+                        <img src="images/mobile_10.png" alt="Image 10">
+                    </div>
+                    <div class="slide3">
+                        <div class="text-overlay">Now, you can check the map that was previously open on the website. See <i>How to Open a New Virtual Map</i>.<br><br>On a PC, if you click on the map, you will be able to download the KML from this view. See <i>How to Download a Virtual Map File</i>, step 2.</div>
+                        <img src="images/mobile_11.jpg" alt="Image 11">
+                    </div>
+                </div>
+                <button id="left-btn3" onclick="prevSlide3()"> &lt; </button>
+                <button id="right-btn3" onclick="nextSlide3()"> &gt; </button>
             </div>
         </div>
 
@@ -195,6 +240,128 @@
         }
         });
       </script>  
+      <script>
+        let currentIndex2 = 0;
+        const slides2 = document.querySelectorAll('.slide2');
+        const totalSlides2 = slides2.length;
+        const sliderContainer2 = document.getElementById('slider-container2');
+        const leftBtn2 = document.getElementById('left-btn2');
+        const rightBtn2 = document.getElementById('right-btn2');
+      
+        function updateSlider2() {
+          const newTransformValue = -currentIndex2 * 100 + '%';
+          document.getElementById('slider2').style.transform = 'translateX(' + newTransformValue + ')';
+        }
+      
+        function nextSlide2() {
+          currentIndex2 = (currentIndex2 + 1) % totalSlides2;
+          updateSlider2();
+        }
+      
+        function prevSlide2() {
+          currentIndex2 = (currentIndex2 - 1 + totalSlides2) % totalSlides2;
+          updateSlider2();
+        }
+      
+        sliderContainer2.addEventListener('mouseenter', () => {
+          leftBtn2.style.display = 'block';
+          rightBtn2.style.display = 'block';
+          });
+      
+          sliderContainer2.addEventListener('mouseleave', () => {
+          leftBtn2.style.display = 'none';
+          rightBtn2.style.display = 'none';
+          });
+      
+        // Add touch support for mobile devices
+        let touchStartX2 = 0;
+        let touchStartY2 = 0;
+        let touchEndX2 = 0;
+        let touchEndY2 = 0;
+
+        document.getElementById('slider-container2').addEventListener('touchstart', (e) => {
+        touchStartX2 = e.touches[0].clientX;
+        touchStartY2 = e.touches[0].clientY;
+        });
+
+        document.getElementById('slider-container2').addEventListener('touchend', (e) => {
+        touchEndX2 = e.changedTouches[0].clientX;
+        touchEndY2 = e.changedTouches[0].clientY;
+
+        const deltaX2 = touchEndX2 - touchStartX2;
+        const deltaY2 = touchEndY2 - touchStartY2;
+
+        if (Math.abs(deltaX2) > Math.abs(deltaY2)) {
+            // Horizontal swipe
+            if (deltaX2 < 0) {
+            nextSlide2();
+            } else if (deltaX2 > 0) {
+            prevSlide2();
+            }
+        }
+        });
+      </script>
+      <script>
+        let currentIndex3 = 0;
+        const slides3 = document.querySelectorAll('.slide3');
+        const totalSlides3 = slides3.length;
+        const sliderContainer3 = document.getElementById('slider-container3');
+        const leftBtn3 = document.getElementById('left-btn3');
+        const rightBtn3 = document.getElementById('right-btn3');
+      
+        function updateSlider3() {
+          const newTransformValue = -currentIndex3 * 100 + '%';
+          document.getElementById('slider3').style.transform = 'translateX(' + newTransformValue + ')';
+        }
+      
+        function nextSlide3() {
+          currentIndex3 = (currentIndex3 + 1) % totalSlides3;
+          updateSlider3();
+        }
+      
+        function prevSlide3() {
+          currentIndex3 = (currentIndex3 - 1 + totalSlides3) % totalSlides3;
+          updateSlider3();
+        }
+      
+        sliderContainer3.addEventListener('mouseenter', () => {
+          leftBtn3.style.display = 'block';
+          rightBtn3.style.display = 'block';
+          });
+      
+          sliderContainer3.addEventListener('mouseleave', () => {
+          leftBtn3.style.display = 'none';
+          rightBtn3.style.display = 'none';
+          });
+      
+        // Add touch support for mobile devices
+        let touchStartX3 = 0;
+        let touchStartY3 = 0;
+        let touchEndX3 = 0;
+        let touchEndY3 = 0;
+
+        document.getElementById('slider-container3').addEventListener('touchstart', (e) => {
+        touchStartX3 = e.touches[0].clientX;
+        touchStartY3 = e.touches[0].clientY;
+        });
+
+        document.getElementById('slider-container3').addEventListener('touchend', (e) => {
+        touchEndX3 = e.changedTouches[0].clientX;
+        touchEndY3 = e.changedTouches[0].clientY;
+
+        const deltaX3 = touchEndX3 - touchStartX3;
+        const deltaY3 = touchEndY3 - touchStartY3;
+
+        if (Math.abs(deltaX3) > Math.abs(deltaY3)) {
+            // Horizontal swipe
+            if (deltaX3 < 0) {
+            nextSlide3();
+            } else if (deltaX3 > 0) {
+            prevSlide3();
+            }
+        }
+        });
+      </script>
     
 </body>
 </html>

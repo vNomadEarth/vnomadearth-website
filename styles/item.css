@@ -205,6 +205,13 @@
     font-family: "Segoe UI VSS (Regular)","Segoe UI","-apple-system",BlinkMacSystemFont,Roboto,"Helvetica Neue",Helvetica,Ubuntu,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
 }
 
+.label-text2 {
+    margin-top: 50px;
+    font-weight: bold;
+    font-size: 14px;
+    font-family: "Segoe UI VSS (Regular)","Segoe UI","-apple-system",BlinkMacSystemFont,Roboto,"Helvetica Neue",Helvetica,Ubuntu,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+}
+
 .box-info-attachments {
     width: auto;
     height: 700px;
@@ -307,7 +314,108 @@ td:first-child {
   }
 
   .text-overlay{
-    padding-bottom: 5px;
+    padding-bottom: 20px;
     font-size: 14px;
     font-family: "Segoe UI VSS (Regular)","Segoe UI","-apple-system",BlinkMacSystemFont,Roboto,"Helvetica Neue",Helvetica,Ubuntu,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  }
+
+
+  #slider-container2 {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  #slider2 {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  #left-btn2, #right-btn2 {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  cursor: pointer;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  outline: none;
+  }
+
+  #left-btn2 {
+  left: 10px;
+  }
+
+  #right-btn2 {
+  right: 10px;
+  }
+
+  .slide2 {
+  min-width: 100%;
+  box-sizing: border-box;
+  width: 100%; /* Set a fixed width */
+  height: 100%; /* Set a fixed height */
+  padding: 5px;
+  }
+
+  .slide2 img {
+  width: 300px;
+  height: auto;
+  object-fit: cover;
+  box-shadow: 0 0px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+  display: block;  /* Remove extra space below the image */
+  margin: 0 auto;  /* Center the image horizontally */
+  }
+
+  #slider-container3 {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  #slider3 {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  #left-btn3, #right-btn3 {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  cursor: pointer;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  outline: none;
+  }
+
+  #left-btn3 {
+  left: 10px;
+  }
+
+  #right-btn3 {
+  right: 10px;
+  }
+
+  .slide3 {
+  min-width: 100%;
+  box-sizing: border-box;
+  width: 100%; /* Set a fixed width */
+  height: 100%; /* Set a fixed height */
+  padding: 5px;
+  }
+
+  .slide3 img {
+  width: 300px;
+  height: auto;
+  object-fit: cover;
+  box-shadow: 0 0px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+  display: block;  /* Remove extra space below the image */
+  margin: 0 auto;  /* Center the image horizontally */
   }
