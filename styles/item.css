@@ -469,3 +469,153 @@ td:first-child {
   display: block;  /* Remove extra space below the image */
   margin: 0 auto;  /* Center the image horizontally */
   }
+
+  #slider-container5 {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  #slider5 {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  #left-btn5, #right-btn5 {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  cursor: pointer;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  outline: none;
+  }
+
+  #left-btn5 {
+  left: 10px;
+  }
+
+  #right-btn5 {
+  right: 10px;
+  }
+
+  .slide5 {
+  min-width: 100%;
+  box-sizing: border-box;
+  width: 100%; /* Set a fixed width */
+  height: 100%; /* Set a fixed height */
+  padding: 5px;
+  }
+
+  .slide5 img {
+  width: 300px;
+  height: auto;
+  object-fit: cover;
+  box-shadow: 0 0px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+  display: block;  /* Remove extra space below the image */
+  margin: 0 auto;  /* Center the image horizontally */
+  }
+
+  #slider-container6 {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  #slider6 {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  #left-btn6, #right-btn6 {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  cursor: pointer;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  outline: none;
+  }
+
+  #left-btn6 {
+  left: 10px;
+  }
+
+  #right-btn6 {
+  right: 10px;
+  }
+
+  .slide6 {
+  min-width: 100%;
+  box-sizing: border-box;
+  width: 100%; /* Set a fixed width */
+  height: 100%; /* Set a fixed height */
+  padding: 5px;
+  }
+
+  .slide6 img {
+  width: 300px;
+  height: auto;
+  object-fit: cover;
+  box-shadow: 0 0px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+  display: block;  /* Remove extra space below the image */
+  margin: 0 auto;  /* Center the image horizontally */
+  }
+
+  #slider-container7 {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  #slider7 {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  #left-btn7, #right-btn7 {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  cursor: pointer;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  outline: none;
+  }
+
+  #left-btn7 {
+  left: 10px;
+  }
+
+  #right-btn7 {
+  right: 10px;
+  }
+
+  .slide7 {
+  min-width: 100%;
+  box-sizing: border-box;
+  width: 100%; /* Set a fixed width */
+  height: 100%; /* Set a fixed height */
+  padding: 5px;
+  }
+
+  .slide7 img {
+  width: 300px;
+  height: auto;
+  object-fit: cover;
+  box-shadow: 0 0px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+  display: block;  /* Remove extra space below the image */
+  margin: 0 auto;  /* Center the image horizontally */
+  }
