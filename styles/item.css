@@ -419,3 +419,53 @@ td:first-child {
   display: block;  /* Remove extra space below the image */
   margin: 0 auto;  /* Center the image horizontally */
   }
+
+  #slider-container4 {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  #slider4 {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  #left-btn4, #right-btn4 {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  cursor: pointer;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  outline: none;
+  }
+
+  #left-btn4 {
+  left: 10px;
+  }
+
+  #right-btn4 {
+  right: 10px;
+  }
+
+  .slide4 {
+  min-width: 100%;
+  box-sizing: border-box;
+  width: 100%; /* Set a fixed width */
+  height: 100%; /* Set a fixed height */
+  padding: 5px;
+  }
+
+  .slide4 img {
+  width: 300px;
+  height: auto;
+  object-fit: cover;
+  box-shadow: 0 0px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+  display: block;  /* Remove extra space below the image */
+  margin: 0 auto;  /* Center the image horizontally */
+  }
